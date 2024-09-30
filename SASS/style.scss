@@ -1,0 +1,38 @@
+$color-primary: rgb(77, 171, 247);
+$color-primary-light: #e7f5ff;
+$color-primary-dark: #1971c2;
+
+$color-grey-dark: #444;
+$color-grey-light: #bbb;
+$color-white: #fff;
+$color-highlight: #ff5733;
+
+// Path to Bulma's sass folder
+@use "../node_modules/bulma/sass" with (
+  $family-primary: '"Lato", sans-serif',
+  $grey-dark: $color-grey-dark,
+  $grey-light: $color-grey-light,
+  $primary: $color-primary,
+  $link: $color-primary-dark,
+  $control-border-width: 2px,
+  $input-shadow: none,
+  $navbar-burger-color: $color-highlight,
+  $warning: $color-highlight,
+  $size-1: 4.5rem,
+  $size-2: 3.5rem
+);
+
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar-item img {
+  max-height: none; /* Remove any height restriction */
+}
+
+.logo {
+  height: 80px; /* Set the desired height */
+  width: auto; /* Maintain the aspect ratio */
+}
