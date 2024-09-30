@@ -21598,4 +21598,9 @@ html {
 .logo {
   height: 80px; /* Set the desired height */
   width: auto; /* Maintain the aspect ratio */
+}
+
+.product-list {
+  max-height: 40rem;
+  overflow-y: scroll;
 }/*# sourceMappingURL=style.css.map */

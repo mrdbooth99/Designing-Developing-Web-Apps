@@ -43,7 +43,7 @@ const products = [
   },
 ];
 
-const productTable = document.querySelector(".table--products-body");
+const productTable = document.querySelector(".product-list-table-body");
 
 productTable.addEventListener("click", (e) => {
   const selectedRow = e.target.closest("tr");
@@ -54,12 +54,12 @@ productTable.addEventListener("click", (e) => {
 
   const rowId = selectedRow.getAttribute("data-tab");
 
-  // re-render the product table with the selected row
-  //   productTable.innerHTML = renderProductTable(products, rowId);
+  // highlight the selected row and render the product image
   highlightRow(rowId);
   renderProductImage(products[Number(rowId) - 1]);
 });
 
+// Render product data to the table
 const renderProductTable = (data) => {
   let html = "";
   data.forEach((entry) => {
@@ -77,6 +77,7 @@ const renderProductTable = (data) => {
   return html;
 };
 
+// Highlight selected row in table
 const highlightRow = (selected) => {
   const productRows = document.querySelectorAll(".table--products-body > tr");
   productRows.forEach((row) => {
@@ -87,6 +88,7 @@ const highlightRow = (selected) => {
   });
 };
 
+// Render the product image
 const renderProductImage = (product) => {
   const imageElement = document.querySelector(".product-image");
   imageElement.setAttribute("src", product.imageURL);
