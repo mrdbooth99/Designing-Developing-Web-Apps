@@ -79,7 +79,9 @@ const renderProductTable = (data) => {
 
 // Highlight selected row in table
 const highlightRow = (selected) => {
-  const productRows = document.querySelectorAll(".table--products-body > tr");
+  const productRows = document.querySelectorAll(
+    ".product-list-table-body > tr"
+  );
   productRows.forEach((row) => {
     row.classList.remove("is-selected");
     if (row.getAttribute("data-tab") === selected) {
